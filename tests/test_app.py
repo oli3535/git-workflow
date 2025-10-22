@@ -1,6 +1,7 @@
+import os
 
 import sys
-sys.path.append("C:\\Users\\mozou\\Desktop\\githubworkflow\\app")
+sys.path.append(os.path.join(os.getcwd(), 'app'))
 from app import dedupe_header
 def test_unique_columns():
     assert dedupe_header(["id", "name", "age"]) == ["id", "name", "age"]
